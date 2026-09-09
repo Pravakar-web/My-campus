@@ -1,7 +1,6 @@
 /* ==========================================================================
-   JAIN GLOBAL CAMPUS, KANAKAPURA
-   Simple, Clean & Modern Single-Page Practical Assignment (style.css)
-   Pure HTML5 & CSS3 (No Frameworks, No External Libraries)
+   MY COLLEGE WEBPAGE STYLESHEET (style.css)
+   Pure CSS3 implementation without external frameworks or dependencies
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -14,54 +13,54 @@
 }
 
 :root {
-    /* Palette Tokens */
-    --color-primary: #1e3a8a;
-    --color-accent: #f59e0b;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --card-bg: rgba(255, 255, 255, 0.95);
-    --border-light: rgba(226, 232, 240, 0.9);
-    --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.28);
-    --radius-card: 20px;
-    --radius-sm: 8px;
-    --transition: all 0.25s ease;
+    /* Color Palette */
+    --primary-color: #1e3a8a;       /* Deep Navy Blue */
+    --accent-gold: #f59e0b;         /* Warm Gold Accent */
+    --text-dark: #0f172a;           /* Slate 900 */
+    --text-muted: #475569;          /* Slate 600 */
+    --bg-card: rgba(255, 255, 255, 0.94);
+    --border-subtle: rgba(226, 232, 240, 0.8);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.18);
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+    --transition-smooth: all 0.3s ease;
 }
 
 /* --------------------------------------------------------------------------
-   2. BODY & FULL-SCREEN BACKGROUND IMAGE
-   Requirement: Campus background image covering the page with subtle overlay
+   2. BODY & BACKGROUND IMAGE SETUP
+   Requirement (b): College background image covering complete page with overlay
    -------------------------------------------------------------------------- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: var(--text-main);
+    /* Clean fallback font stack */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
     line-height: 1.6;
     min-height: 100vh;
     
-    /* Full-screen background image */
-    background-image: url('campus.jpg');
+    /* Full-screen background image setup */
+    background-image: url('campus.jpg'), linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden;
 }
 
-/* Subtle Dark Transparent Overlay */
-.background-overlay {
+/* Semi-transparent dark gradient overlay for optimal readability */
+.page-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        180deg,
-        rgba(15, 23, 42, 0.75) 0%,
-        rgba(15, 23, 42, 0.68) 50%,
+        180deg, 
+        rgba(15, 23, 42, 0.75) 0%, 
+        rgba(15, 23, 42, 0.65) 50%, 
         rgba(15, 23, 42, 0.85) 100%
     );
     backdrop-filter: blur(2px);
@@ -69,131 +68,285 @@ body {
     pointer-events: none;
 }
 
-/* --------------------------------------------------------------------------
-   3. PAGE CONTAINER & VISUAL HIERARCHY
-   -------------------------------------------------------------------------- */
-.page-container {
+/* Main Container Wrapper */
+.main-wrapper {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 820px;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px 40px 20px;
 }
 
 /* --------------------------------------------------------------------------
-   4. TOP HEADER SECTION
-   Requirement: "JAIN GLOBAL CAMPUS" in large bold text + "Kanakapura, Karnataka"
+   3. COLLEGE HEADER SECTION
+   Requirement (c): Prominent college name in large bold text + address below
    -------------------------------------------------------------------------- */
 .college-header {
     text-align: center;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 24px;
+    border-top: 6px solid var(--primary-color);
+    position: relative;
+    transition: var(--transition-smooth);
 }
 
-.college-name {
-    font-size: 2.75rem;
+.college-header:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* College Accreditation Badge */
+.college-badge {
+    display: inline-block;
+    background: #eef2ff;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    border: 1px solid #c7d2fe;
+}
+
+/* College Name: Large, bold, prominent */
+.college-title {
+    font-size: 2.6rem;
     font-weight: 900;
-    color: #ffffff;
-    letter-spacing: 2px;
+    color: #1e3a8a;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
     text-transform: uppercase;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-    line-height: 1.15;
 }
 
-.college-location {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    letter-spacing: 1px;
-    margin-top: 6px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+.college-tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* College Address: Smaller font size, center-aligned, clean */
+.college-address {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #475569;
+    font-weight: 500;
+    padding-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
-   5. MAIN GLASS-STYLE CARD
-   Slightly transparent white background, subtle blur, rounded corners, soft shadow
+   4. ANNOUNCEMENTS / MARQUEE TICKER SECTION
+   Requirement (e): Scrolling text with examination dates, events, seminars
    -------------------------------------------------------------------------- */
-.glass-card {
-    width: 100%;
-    background: var(--card-bg);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: var(--radius-card);
-    padding: 38px 42px;
-    box-shadow: var(--shadow-card);
+.announcement-banner {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 10px 18px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-soft);
+    border-left: 6px solid #dc2626;
+    overflow: hidden;
 }
 
-/* Courses Section Heading */
-.courses-section {
+.announcement-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.pulse-icon {
+    width: 10px;
+    height: 10px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+.marquee-container {
+    flex: 1;
+    overflow: hidden;
+    font-size: 0.98rem;
+    color: #1e293b;
+}
+
+.marquee-container marquee {
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.marquee-container strong {
+    color: #0f172a;
+}
+
+/* --------------------------------------------------------------------------
+   5. KEY HIGHLIGHTS / STATS SECTION
+   -------------------------------------------------------------------------- */
+.highlights-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
     text-align: center;
+    box-shadow: var(--shadow-soft);
+    border-bottom: 4px solid var(--primary-color);
+    transition: var(--transition-smooth);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   6. COURSES OFFERED SECTION
+   Requirement (d): Section titled "Courses Offered".
+   Each course name must have a DIFFERENT text color, font style, and typeface.
+   -------------------------------------------------------------------------- */
+.courses-section {
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
 .section-title {
-    font-size: 1.85rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    color: var(--text-main);
-    letter-spacing: -0.3px;
-    margin-bottom: 8px;
+    color: #0f172a;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
 }
 
-.title-underline {
-    width: 50px;
-    height: 3px;
-    background: var(--color-accent);
-    margin: 0 auto 28px auto;
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: var(--primary-color);
     border-radius: 2px;
 }
 
-/* Courses List */
-.courses-list {
-    list-style: none;
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: 10px;
+}
+
+/* Course Cards Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.course-card {
+    background: #ffffff;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    text-align: left;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    position: relative;
 }
 
-.course-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 12px 18px;
-    background: #ffffff;
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    transition: var(--transition);
-}
-
-.course-item:hover {
-    transform: translateY(-2px);
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
     border-color: #cbd5e1;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-.course-badge {
+.card-badge {
+    display: inline-block;
+    align-self: flex-start;
     font-size: 0.75rem;
-    font-weight: 800;
-    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 4px;
     background: #f1f5f9;
-    padding: 4px 8px;
-    border-radius: 6px;
-    letter-spacing: 0.5px;
+    color: #475569;
+    margin-bottom: 14px;
 }
 
+/* Base Course Name Style */
 .course-name {
-    font-size: 1.15rem;
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+    line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
-   6. DISTINCT COURSE TYPOGRAPHY & COLORS (Assignment Requirement)
-   Each course name must have a DIFFERENT text color, font style, and typeface.
+   SPECIFIC COURSE TYPOGRAPHY & COLOR DIFFERENTIATION (Requirement (d))
+   Each course has a unique color, font-style, and font-family (typeface)
    -------------------------------------------------------------------------- */
 
 /* Course 1: BCA
    - Typeface: 'Segoe UI', Tahoma, sans-serif
-   - Style: normal (Heavy Bold)
+   - Font Style: normal (Heavy Extra-Bold)
    - Color: Royal Blue (#1d4ed8)
 */
 .course-bca {
@@ -201,25 +354,39 @@ body {
     font-style: normal;
     font-weight: 800;
     color: #1d4ed8;
+    text-shadow: 0 1px 2px rgba(29, 78, 216, 0.15);
 }
 
-/* Course 2: B.Com
-   - Typeface: 'Courier New', Courier, monospace
-   - Style: normal (Letter Spacing)
-   - Color: Deep Violet / Purple (#7c3aed)
+/* Course 2: B.Sc Computer Science
+   - Typeface: 'Georgia', Times New Roman, serif
+   - Font Style: italic
+   - Color: Emerald Green (#047857)
 */
-.course-bcom {
-    font-family: 'Courier New', Courier, monospace;
-    font-style: normal;
-    font-weight: 800;
-    color: #7c3aed;
+.course-bsc {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #047857;
     letter-spacing: 0.5px;
 }
 
-/* Course 3: BBA
+/* Course 3: B.Tech
+   - Typeface: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
+   - Font Style: oblique
+   - Color: Crimson Red (#b91c1c)
+*/
+.course-btech {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-style: oblique;
+    font-weight: 800;
+    color: #b91c1c;
+    letter-spacing: -0.3px;
+}
+
+/* Course 4: BBA
    - Typeface: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
-   - Style: italic
-   - Color: Warm Amber / Gold (#b45309)
+   - Font Style: italic
+   - Color: Amber / Gold (#b45309)
 */
 .course-bba {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -228,162 +395,200 @@ body {
     color: #b45309;
 }
 
-/* Course 4: B.Sc Computer Science
-   - Typeface: 'Georgia', Times, serif
-   - Style: italic
-   - Color: Emerald Green (#047857)
+/* Course 5: B.Com
+   - Typeface: 'Courier New', Courier, monospace
+   - Font Style: normal (Monospace Letter Spacing)
+   - Color: Deep Violet / Purple (#6d28d9)
 */
-.course-bsc {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 700;
-    color: #047857;
-}
-
-/* Course 5: B.Tech
-   - Typeface: 'Trebuchet MS', 'Lucida Sans', sans-serif
-   - Style: oblique
-   - Color: Crimson Red (#dc2626)
-*/
-.course-btech {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    font-style: oblique;
+.course-bcom {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
     font-weight: 800;
-    color: #dc2626;
+    color: #6d28d9;
+    letter-spacing: 0.8px;
 }
 
-/* Course 6: MBA
+/* Course 6: MCA
    - Typeface: 'Verdana', Geneva, sans-serif
-   - Style: oblique
-   - Color: Deep Teal / Cyan (#0891b2)
+   - Font Style: oblique
+   - Color: Deep Teal / Cyan (#0e7490)
 */
-.course-mba {
+.course-mca {
     font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     font-style: oblique;
     font-weight: 700;
-    color: #0891b2;
+    color: #0e7490;
+    font-size: 1.35rem;
 }
 
-/* --------------------------------------------------------------------------
-   7. CARD DIVIDER
-   -------------------------------------------------------------------------- */
-.card-divider {
-    height: 1px;
-    background: #e2e8f0;
-    margin: 28px 0 24px 0;
+.course-description {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-/* --------------------------------------------------------------------------
-   8. ANNOUNCEMENTS / TICKER AREA
-   Requirement: Scrolling text with smooth motion and modern wrapper
-   -------------------------------------------------------------------------- */
-.announcements-section {
-    width: 100%;
-}
-
-.ticker-box {
+.course-meta {
     display: flex;
-    align-items: center;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: var(--radius-sm);
-    padding: 10px 14px;
-    gap: 14px;
-    overflow: hidden;
-}
-
-.ticker-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #fee2e2;
-    color: #b91c1c;
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    white-space: nowrap;
-    border: 1px solid #fecaca;
-}
-
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #ef4444;
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse-dot-anim 1.5s infinite;
-}
-
-@keyframes pulse-dot-anim {
-    0% { transform: scale(0.95); opacity: 1; }
-    50% { transform: scale(1.3); opacity: 0.6; }
-    100% { transform: scale(0.95); opacity: 1; }
-}
-
-.ticker-scroll {
-    flex: 1;
-    overflow: hidden;
-    font-size: 0.92rem;
-    font-weight: 500;
+    justify-content: space-between;
+    font-size: 0.85rem;
     color: #334155;
-}
-
-.ticker-scroll marquee {
-    vertical-align: middle;
+    padding-top: 14px;
+    border-top: 1px dashed #cbd5e1;
+    background: #f8fafc;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
 }
 
 /* --------------------------------------------------------------------------
-   9. FOOTER SECTION
-   Small and clean copyright text at the bottom
+   7. FACILITIES SECTION
+   -------------------------------------------------------------------------- */
+.facilities-section {
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.facility-item {
+    background: #ffffff;
+    border: 1px solid var(--border-subtle);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.facility-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+}
+
+.facility-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.facility-item h4 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.facility-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   8. FOOTER SECTION
    -------------------------------------------------------------------------- */
 .college-footer {
+    background: #0f172a;
+    color: #f8fafc;
+    border-radius: var(--radius-lg);
+    padding: 40px 30px 20px 30px;
+    box-shadow: var(--shadow-soft);
+    border-top: 4px solid var(--accent-gold);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background: var(--accent-gold);
+    border-radius: 2px;
+}
+
+.footer-col p {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
     text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    color: #64748b;
     font-size: 0.85rem;
-    color: #cbd5e1;
-    letter-spacing: 0.4px;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* --------------------------------------------------------------------------
-   10. RESPONSIVE DESIGN (MEDIA QUERIES)
+   9. RESPONSIVE DESIGN (MEDIA QUERIES)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    .page-container {
-        padding: 30px 16px;
-        gap: 22px;
+    .main-wrapper {
+        margin: 15px auto;
+        padding: 0 12px 25px 12px;
     }
 
-    .college-name {
-        font-size: 2rem;
-        letter-spacing: 1px;
+    .college-header {
+        padding: 28px 18px;
     }
 
-    .college-location {
-        font-size: 1.05rem;
+    .college-title {
+        font-size: 1.8rem;
     }
 
-    .glass-card {
-        padding: 28px 20px;
+    .college-tagline {
+        font-size: 1rem;
+    }
+
+    .college-address {
+        font-size: 0.88rem;
+    }
+
+    .announcement-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .announcement-label {
+        margin-right: 0;
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.75rem;
     }
 
-    .course-item {
-        padding: 10px 14px;
-        gap: 12px;
+    .courses-grid {
+        grid-template-columns: 1fr;
     }
 
-    .course-name {
-        font-size: 1.02rem;
-    }
-
-    .ticker-box {
+    .course-meta {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        gap: 6px;
     }
 }

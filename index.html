@@ -3,117 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Requirement: Title for My College / Jain Global Campus -->
-    <title>My College | Jain Global Campus, Kanakapura</title>
-    <!-- Linking external CSS stylesheet -->
+    <!-- Requirement (a): Page title -->
+    <title>My College</title>
+    <!-- Linking external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- =========================================================
-         BACKGROUND OVERLAY
-         Provides a subtle dark transparent tint over the campus image
+         BACKGROUND OVERLAY WRAPPER
+         Ensures background image covers full screen with high contrast
          ========================================================= -->
-    <div class="background-overlay"></div>
+    <div class="page-overlay"></div>
 
-    <!-- =========================================================
-         MAIN PAGE WRAPPER
-         Single-page centered layout with intentional visual balance
-         ========================================================= -->
-    <div class="page-container">
+    <!-- MAIN CONTAINER: Glassmorphism layout for clean readability -->
+    <div class="main-wrapper">
 
         <!-- =====================================================
-             TOP HEADER
-             Prominent college name and location in a clean, minimal style
+             TOP HEADER SECTION
+             Requirement (c): Large, bold college name + address below
+             Center-aligned, clean and professional typography
              ===================================================== -->
         <header class="college-header">
-            <h1 class="college-name">JAIN GLOBAL CAMPUS</h1>
-            <p class="college-location">Kanakapura, Karnataka</p>
+            <div class="college-badge">🏛️ JAIN (DEEMED-TO-BE UNIVERSITY) • NAAC 'A++' ACCREDITED</div>
+            <h1 class="college-title">Jain Global Campus</h1>
+            <p class="college-tagline">Excellence in Higher Education, Innovation &amp; Research</p>
+            <address class="college-address">
+                📍 Kanakapura, Karnataka - 562112, India
+            </address>
         </header>
 
         <!-- =====================================================
-             MAIN GLASS-STYLE CONTENT CARD
-             Single central card containing Courses Offered & Announcements
+             ANNOUNCEMENTS / NEWS TICKER (MARQUEE)
+             Requirement (e): Scrolling text with examination dates,
+             college events, seminars, workshops, and admissions
              ===================================================== -->
-        <main class="glass-card">
+        <section class="announcement-banner" aria-label="College Announcements">
+            <div class="announcement-label">
+                <span class="pulse-icon"></span>
+                <strong>LATEST NEWS:</strong>
+            </div>
+            <div class="marquee-container">
+                <!-- HTML Marquee element with CSS fallback and styling -->
+                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">
+                    📢 <strong>Upcoming Exams:</strong> Semester examinations begin from 15 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🎉 <strong>College Fest:</strong> Annual Cultural Fest "TARANG 2026" on 25 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🤖 <strong>Seminar &amp; Workshop:</strong> National Workshop on Artificial Intelligence &amp; Deep Learning on 30 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🎓 <strong>Admissions Open:</strong> Applications open for Academic Year 2026-27 (BCA, B.Sc, B.Tech, BBA, B.Com) 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🏆 <strong>Scholarship Alert:</strong> Merit-based scholarship forms submission deadline is 05 November
+                </marquee>
+            </div>
+        </section>
 
-            <!-- Section 1: Courses Offered -->
-            <section class="courses-section" aria-labelledby="courses-heading">
-                <h2 id="courses-heading" class="section-title">Courses Offered</h2>
-                <div class="title-underline"></div>
-
-                <!-- 
-                    Requirement: Each course MUST have a DIFFERENT
-                    font color, font style (normal/italic/oblique), and typeface.
-                -->
-                <ul class="courses-list">
-                    
-                    <!-- Course 1: BCA -->
-                    <li class="course-item">
-                        <span class="course-badge">01</span>
-                        <span class="course-name course-bca">BCA (Bachelor of Computer Applications)</span>
-                    </li>
-
-                    <!-- Course 2: B.Com -->
-                    <li class="course-item">
-                        <span class="course-badge">02</span>
-                        <span class="course-name course-bcom">B.Com (Bachelor of Commerce)</span>
-                    </li>
-
-                    <!-- Course 3: BBA -->
-                    <li class="course-item">
-                        <span class="course-badge">03</span>
-                        <span class="course-name course-bba">BBA (Bachelor of Business Administration)</span>
-                    </li>
-
-                    <!-- Course 4: B.Sc Computer Science -->
-                    <li class="course-item">
-                        <span class="course-badge">04</span>
-                        <span class="course-name course-bsc">B.Sc Computer Science</span>
-                    </li>
-
-                    <!-- Course 5: B.Tech -->
-                    <li class="course-item">
-                        <span class="course-badge">05</span>
-                        <span class="course-name course-btech">B.Tech (Bachelor of Technology)</span>
-                    </li>
-
-                    <!-- Course 6: MBA -->
-                    <li class="course-item">
-                        <span class="course-badge">06</span>
-                        <span class="course-name course-mba">MBA (Master of Business Administration)</span>
-                    </li>
-
-                </ul>
-            </section>
-
-            <!-- Card Divider -->
-            <div class="card-divider"></div>
-
-            <!-- Section 2: Latest Updates / Announcements Ticker -->
-            <section class="announcements-section" aria-label="Campus Announcements">
-                <div class="ticker-box">
-                    <span class="ticker-label">
-                        <span class="pulse-dot"></span>
-                        LATEST UPDATES
-                    </span>
-                    <div class="ticker-scroll">
-                        <!-- Smooth HTML marquee with hover-pause functionality -->
-                        <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
-                            Upcoming Semester Examinations &bull; Annual College Events &bull; Workshops &amp; Seminars &bull; Important Academic Announcements &bull; Admissions Open for Academic Year 2026-27
-                        </marquee>
-                    </div>
+        <!-- =====================================================
+             MAIN CONTENT AREA
+             ===================================================== -->
+        <main>
+            <!-- College Key Highlights Section -->
+            <section class="highlights-section">
+                <div class="stat-card">
+                    <span class="stat-number">#1</span>
+                    <span class="stat-desc">Top Ranked Regional Campus</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-desc">Placement Assistance</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-desc">Hi-Tech Labs &amp; Centers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">25k+</span>
+                    <span class="stat-desc">Global Alumni Network</span>
                 </div>
             </section>
 
+            <!-- =====================================================
+                 COURSES OFFERED SECTION
+                 Requirement (d): Section titled "Courses Offered".
+                 Each course name has a DIFFERENT text color, font style,
+                 and typeface, while remaining modern and distinct.
+                 ===================================================== -->
+            <section class="courses-section" id="courses">
+                <div class="section-header">
+                    <h2 class="section-title">Courses Offered</h2>
+                    <p class="section-subtitle">Empowering students with industry-aligned academic programs and practical training</p>
+                </div>
+
+                <div class="courses-grid">
+
+                    <!-- Course 1: BCA -->
+                    <article class="course-card">
+                        <div class="card-badge">Computer &amp; IT</div>
+                        <!-- Unique Typeface: 'Segoe UI', sans-serif | Color: Royal Blue | Style: Normal Bold -->
+                        <h3 class="course-name course-bca">BCA (Bachelor of Computer Applications)</h3>
+                        <p class="course-description">
+                            A comprehensive 3-year undergraduate program focusing on software development, web technologies, database management, cloud computing, and modern full-stack web engineering.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Math/CS</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 2: B.Sc Computer Science -->
+                    <article class="course-card">
+                        <div class="card-badge">Science &amp; Research</div>
+                        <!-- Unique Typeface: 'Georgia', serif | Color: Emerald Green | Style: Italic -->
+                        <h3 class="course-name course-bsc">B.Sc Computer Science</h3>
+                        <p class="course-description">
+                            An in-depth academic curriculum emphasizing theoretical foundations of computing, algorithm design, data structures, machine learning, and discrete mathematics.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Science</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 3: B.Tech -->
+                    <article class="course-card">
+                        <div class="card-badge">Engineering</div>
+                        <!-- Unique Typeface: 'Trebuchet MS', sans-serif | Color: Crimson Red | Style: Oblique -->
+                        <h3 class="course-name course-btech">B.Tech (Bachelor of Technology)</h3>
+                        <p class="course-description">
+                            A 4-year premier engineering program offering specializations in Artificial Intelligence, Computer Science Engineering, Electronics, and Cyber Security.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 4 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with PCM</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 4: BBA -->
+                    <article class="course-card">
+                        <div class="card-badge">Management</div>
+                        <!-- Unique Typeface: 'Palatino Linotype', serif | Color: Dark Amber/Gold | Style: Italic -->
+                        <h3 class="course-name course-bba">BBA (Bachelor of Business Administration)</h3>
+                        <p class="course-description">
+                            Designed to build visionary business leaders, covering financial accounting, marketing strategies, human resource management, entrepreneurship, and international trade.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 Any Stream</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 5: B.Com -->
+                    <article class="course-card">
+                        <div class="card-badge">Commerce &amp; Finance</div>
+                        <!-- Unique Typeface: 'Courier New', monospace | Color: Deep Purple/Violet | Style: Normal Monospace -->
+                        <h3 class="course-name course-bcom">B.Com (Bachelor of Commerce)</h3>
+                        <p class="course-description">
+                            Focuses on financial accounting, corporate taxation, auditing, banking, and commercial law to prepare graduates for careers in finance, investment, and chartered accountancy.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Commerce/Math</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 6: MCA -->
+                    <article class="course-card">
+                        <div class="card-badge">Postgraduate Studies</div>
+                        <!-- Unique Typeface: 'Verdana', sans-serif | Color: Teal / Cyan | Style: Oblique -->
+                        <h3 class="course-name course-mca">MCA (Master of Computer Applications)</h3>
+                        <p class="course-description">
+                            Advanced postgraduate specialization program covering distributed systems, enterprise software architecture, AI algorithms, DevOps, and research methodology.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 2 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> BCA / B.Sc / Graduation</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Campus Life & Facilities Section -->
+            <section class="facilities-section">
+                <div class="section-header">
+                    <h2 class="section-title">Campus Facilities</h2>
+                    <p class="section-subtitle">World-class infrastructure designed to foster innovation and holistic learning</p>
+                </div>
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <div class="facility-icon">📚</div>
+                        <h4>Central Digital Library</h4>
+                        <p>Over 100,000+ volumes, scientific journals, and 24/7 digital research portal access.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">💻</div>
+                        <h4>Advanced Computing Labs</h4>
+                        <p>High-performance workstations equipped with GPU clusters and modern development tools.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">⚽</div>
+                        <h4>Sports &amp; Recreation</h4>
+                        <p>Olympic-standard athletic track, indoor badminton courts, gymnasium, and sports arena.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">🏢</div>
+                        <h4>Innovation &amp; Incubation Hub</h4>
+                        <p>Dedicated mentorship and seed funding support for student-led tech startups.</p>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- =====================================================
-             FOOTER
-             Minimal and clean copyright text at the bottom
+             FOOTER SECTION
+             Semantic HTML5 footer with contact info & copyright
              ===================================================== -->
         <footer class="college-footer">
-            <p>&copy; 2026 Jain Global Campus, Kanakapura</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Jain Global Campus</h3>
+                    <p>Committed to nurturing global leaders through academic excellence, innovation, and ethical values.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📍 Kanakapura, Karnataka - 562112, India</p>
+                    <p>📧 Email: fet@jainuniversity.ac.in</p>
+                    <p>📞 Phone: +91 80 2757 7200 / 7201</p>
+                    <p>🌐 Web: www.jainuniversity.ac.in</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Campus Hours</h3>
+                    <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jain Global Campus, Kanakapura. All Rights Reserved. | Designed for Web Programming Lab</p>
+            </div>
         </footer>
 
     </div>
