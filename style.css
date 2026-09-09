@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MY COLLEGE WEBPAGE STYLESHEET (style.css)
+   JAIN GLOBAL CAMPUS – KANAKAPURA WEBPAGE STYLESHEET (style.css)
    Pure CSS3 implementation without external frameworks or dependencies
    ========================================================================== */
 
@@ -30,7 +30,7 @@
 
 /* --------------------------------------------------------------------------
    2. BODY & BACKGROUND IMAGE SETUP
-   Requirement (b): College background image covering complete page with overlay
+   Requirement: Full-screen background image for Jain Global Campus with overlay
    -------------------------------------------------------------------------- */
 body {
     /* Clean fallback font stack */
@@ -79,7 +79,8 @@ body {
 
 /* --------------------------------------------------------------------------
    3. COLLEGE HEADER SECTION
-   Requirement (c): Prominent college name in large bold text + address below
+   Requirement: Prominent "Jain Global Campus" in large bold text +
+   "Kanakapura, Karnataka" in smaller text directly below
    -------------------------------------------------------------------------- */
 .college-header {
     text-align: center;
@@ -97,7 +98,7 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
-/* College Accreditation Badge */
+/* Accreditation Badge */
 .college-badge {
     display: inline-block;
     background: #eef2ff;
@@ -111,24 +112,26 @@ body {
     border: 1px solid #c7d2fe;
 }
 
-/* College Name: Large, bold, prominent */
+/* Prominent Campus Title */
 .college-title {
-    font-size: 2.6rem;
+    font-size: 2.75rem;
     font-weight: 900;
     color: #1e3a8a;
     letter-spacing: -0.5px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     text-transform: uppercase;
 }
 
+/* Location Tagline */
 .college-tagline {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    margin-bottom: 16px;
+    font-size: 1.25rem;
+    color: #b45309;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
 }
 
-/* College Address: Smaller font size, center-aligned, clean */
+/* College Address: Smaller font size, center-aligned */
 .college-address {
     font-style: normal;
     font-size: 0.95rem;
@@ -142,7 +145,7 @@ body {
 
 /* --------------------------------------------------------------------------
    4. ANNOUNCEMENTS / MARQUEE TICKER SECTION
-   Requirement (e): Scrolling text with examination dates, events, seminars
+   Requirement: Scrolling text with examination dates, events, workshops, admissions
    -------------------------------------------------------------------------- */
 .announcement-banner {
     display: flex;
@@ -250,7 +253,7 @@ body {
 
 /* --------------------------------------------------------------------------
    6. COURSES OFFERED SECTION
-   Requirement (d): Section titled "Courses Offered".
+   Requirement: Section titled "Courses Offered".
    Each course name must have a DIFFERENT text color, font style, and typeface.
    -------------------------------------------------------------------------- */
 .courses-section {
@@ -340,16 +343,16 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   SPECIFIC COURSE TYPOGRAPHY & COLOR DIFFERENTIATION (Requirement (d))
+   SPECIFIC COURSE TYPOGRAPHY & COLOR DIFFERENTIATION
    Each course has a unique color, font-style, and font-family (typeface)
    -------------------------------------------------------------------------- */
 
-/* Course 1: BCA
+/* Course 1: B.Tech Computer Science & Engineering
    - Typeface: 'Segoe UI', Tahoma, sans-serif
    - Font Style: normal (Heavy Extra-Bold)
    - Color: Royal Blue (#1d4ed8)
 */
-.course-bca {
+.course-btech-cse {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -357,12 +360,12 @@ body {
     text-shadow: 0 1px 2px rgba(29, 78, 216, 0.15);
 }
 
-/* Course 2: B.Sc Computer Science
+/* Course 2: B.Tech Aerospace Engineering
    - Typeface: 'Georgia', Times New Roman, serif
    - Font Style: italic
    - Color: Emerald Green (#047857)
 */
-.course-bsc {
+.course-aerospace {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: 700;
@@ -370,12 +373,12 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Course 3: B.Tech
+/* Course 3: BCA (Bachelor of Computer Applications)
    - Typeface: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif
    - Font Style: oblique
    - Color: Crimson Red (#b91c1c)
 */
-.course-btech {
+.course-bca {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-style: oblique;
     font-weight: 800;
@@ -383,24 +386,24 @@ body {
     letter-spacing: -0.3px;
 }
 
-/* Course 4: BBA
+/* Course 4: B.Tech Electronics & Communication
    - Typeface: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
    - Font Style: italic
    - Color: Amber / Gold (#b45309)
 */
-.course-bba {
+.course-ece {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-style: italic;
     font-weight: 700;
     color: #b45309;
 }
 
-/* Course 5: B.Com
+/* Course 5: B.Des (Bachelor of Design)
    - Typeface: 'Courier New', Courier, monospace
    - Font Style: normal (Monospace Letter Spacing)
    - Color: Deep Violet / Purple (#6d28d9)
 */
-.course-bcom {
+.course-bdes {
     font-family: 'Courier New', Courier, monospace;
     font-style: normal;
     font-weight: 800;
@@ -408,7 +411,7 @@ body {
     letter-spacing: 0.8px;
 }
 
-/* Course 6: MCA
+/* Course 6: MCA (Master of Computer Applications)
    - Typeface: 'Verdana', Geneva, sans-serif
    - Font Style: oblique
    - Color: Deep Teal / Cyan (#0e7490)
@@ -557,11 +560,11 @@ body {
     }
 
     .college-title {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .college-tagline {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .college-address {

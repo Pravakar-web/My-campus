@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Requirement (a): Page title must be "My College" -->
-    <title>My College</title>
-    <!-- Linking external stylesheet -->
+    <!-- Requirement 1: Page title for Jain Global Campus -->
+    <title>Jain Global Campus – Kanakapura</title>
+    <!-- External stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- =========================================================
          BACKGROUND OVERLAY WRAPPER
-         Ensures background image covers full screen with high contrast
+         Ensures Jain Global Campus background covers full screen
+         with a semi-transparent dark overlay for high readability
          ========================================================= -->
     <div class="page-overlay"></div>
 
@@ -21,40 +22,44 @@
 
         <!-- =====================================================
              TOP HEADER SECTION
-             Requirement (c): Large, bold college name + address below
-             Center-aligned, clean and professional typography
+             Requirement 3: "Jain Global Campus" in large, bold,
+             modern heading and "Kanakapura, Karnataka" in smaller text
              ===================================================== -->
         <header class="college-header">
-            <div class="college-badge">🏛️ ESTD. 1985 • NAAC 'A++' ACCREDITED</div>
-            <h1 class="college-title">Imperial Institute of Science & Technology</h1>
-            <p class="college-tagline">Excellence in Higher Education, Innovation & Research</p>
+            <div class="college-badge">🎓 JAIN (DEEMED-TO-BE UNIVERSITY) • NAAC 'A++' ACCREDITED</div>
+            <h1 class="college-title">Jain Global Campus</h1>
+            <p class="college-tagline">Kanakapura, Karnataka</p>
             <address class="college-address">
-                📍 Knowledge Innovation Park, Sector 42, Outer Ring Road, Bengaluru, Karnataka - 560103, India
+                📍 NH 209, Jakkasandra Post, Kanakapura Taluk, Ramanagara District, Karnataka - 562112, India
             </address>
         </header>
 
         <!-- =====================================================
              ANNOUNCEMENTS / NEWS TICKER (MARQUEE)
-             Requirement (e): Scrolling text with examination dates,
-             college events, seminars, workshops, and admissions
+             Requirement 5: Scrolling announcements including:
+             - Upcoming Semester Examinations
+             - Admissions Open
+             - College Events and Activities
+             - Workshops and Seminars
+             - Important Academic Announcements
              ===================================================== -->
         <section class="announcement-banner" aria-label="College Announcements">
             <div class="announcement-label">
                 <span class="pulse-icon"></span>
-                <strong>LATEST NEWS:</strong>
+                <strong>CAMPUS NEWS:</strong>
             </div>
             <div class="marquee-container">
-                <!-- HTML Marquee element with CSS fallback and styling -->
+                <!-- HTML Marquee element with hover pause and continuous scroll -->
                 <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">
-                    📢 <strong>Upcoming Exams:</strong> Semester examinations begin from 15 October 
+                    📝 <strong>Upcoming Semester Examinations:</strong> End-semester theory and laboratory examinations commence from 15 October 2026. Hall tickets available on the student portal. 
                     &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-                    🎉 <strong>College Fest:</strong> Annual Cultural Fest "AURA 2026" on 25 October 
+                    🎓 <strong>Admissions Open:</strong> JET (Jain Entrance Test) applications are now open for B.Tech, BCA, MCA, M.Tech &amp; B.Des for Academic Year 2026-27. 
                     &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-                    🤖 <strong>Seminar & Workshop:</strong> National Workshop on Artificial Intelligence & Deep Learning on 30 October 
+                    🎉 <strong>College Events and Activities:</strong> Annual National Cultural &amp; Technical Fest "TARANG 2026" on 25 October at Jain Global Campus Amphitheatre. 
                     &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-                    🎓 <strong>Admissions Open:</strong> Applications open for Academic Year 2026-27 (BCA, B.Sc, B.Tech, BBA, B.Com) 
+                    🤖 <strong>Workshops and Seminars:</strong> International Hands-on Workshop on Artificial Intelligence, Cloud Computing &amp; Autonomous Robotics on 30 October. 
                     &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-                    🏆 <strong>Scholarship Alert:</strong> Merit-based scholarship forms submission deadline is 05 November
+                    📢 <strong>Important Academic Announcements:</strong> Last date for submission of Final Year Capstone Project proposals and Merit Scholarship forms is 05 November.
                 </marquee>
             </div>
         </section>
@@ -63,75 +68,61 @@
              MAIN CONTENT AREA
              ===================================================== -->
         <main>
-            <!-- College Key Highlights Section -->
+            <!-- Campus Key Highlights -->
             <section class="highlights-section">
                 <div class="stat-card">
-                    <span class="stat-number">#1</span>
-                    <span class="stat-desc">Top Ranked Regional College</span>
+                    <span class="stat-number">300+</span>
+                    <span class="stat-desc">Acres Sprawling Green Campus</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-desc">Placement Assistance</span>
+                    <span class="stat-number">NAAC A++</span>
+                    <span class="stat-desc">Highest National Accreditation</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-desc">Hi-Tech Labs & Centers</span>
+                    <span class="stat-number">FET</span>
+                    <span class="stat-desc">Faculty of Engineering &amp; Tech</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">25k+</span>
-                    <span class="stat-desc">Global Alumni Network</span>
+                    <span class="stat-number">200+</span>
+                    <span class="stat-desc">Global Placement Partners</span>
                 </div>
             </section>
 
             <!-- =====================================================
                  COURSES OFFERED SECTION
-                 Requirement (d): Section titled "Courses Offered".
+                 Requirement 4: Section titled "Courses Offered".
                  Each course name has a DIFFERENT text color, font style,
                  and typeface, while remaining modern and distinct.
                  ===================================================== -->
             <section class="courses-section" id="courses">
                 <div class="section-header">
                     <h2 class="section-title">Courses Offered</h2>
-                    <p class="section-subtitle">Empowering students with industry-aligned academic programs and practical training</p>
+                    <p class="section-subtitle">Industry-aligned academic degree programs offered at Jain Global Campus, Kanakapura</p>
                 </div>
 
                 <div class="courses-grid">
 
-                    <!-- Course 1: BCA -->
+                    <!-- Course 1: B.Tech Computer Science & Engineering -->
                     <article class="course-card">
-                        <div class="card-badge">Computer & IT</div>
+                        <div class="card-badge">Engineering &amp; Technology</div>
                         <!-- Unique Typeface: 'Segoe UI', sans-serif | Color: Royal Blue | Style: Normal Bold -->
-                        <h3 class="course-name course-bca">BCA (Bachelor of Computer Applications)</h3>
+                        <h3 class="course-name course-btech-cse">B.Tech in Computer Science &amp; Engineering</h3>
                         <p class="course-description">
-                            A comprehensive 3-year undergraduate program focusing on software development, web technologies, database management, cloud computing, and modern full-stack web engineering.
+                            Premier 4-year engineering program with cutting-edge specializations in Artificial Intelligence, Machine Learning, Cloud Computing, Cyber Security, and Full-Stack Development.
                         </p>
                         <div class="course-meta">
-                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
-                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Math/CS</span>
+                            <span>⏱️ <strong>Duration:</strong> 4 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with PCM / JET</span>
                         </div>
                     </article>
 
-                    <!-- Course 2: B.Sc Computer Science -->
+                    <!-- Course 2: B.Tech Aerospace Engineering -->
                     <article class="course-card">
-                        <div class="card-badge">Science & Research</div>
+                        <div class="card-badge">Aerospace &amp; Aviation</div>
                         <!-- Unique Typeface: 'Georgia', serif | Color: Emerald Green | Style: Italic -->
-                        <h3 class="course-name course-bsc">B.Sc Computer Science</h3>
+                        <h3 class="course-name course-aerospace">B.Tech in Aerospace Engineering</h3>
                         <p class="course-description">
-                            An in-depth academic curriculum emphasizing theoretical foundations of computing, algorithm design, data structures, machine learning, and discrete mathematics.
-                        </p>
-                        <div class="course-meta">
-                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
-                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Science</span>
-                        </div>
-                    </article>
-
-                    <!-- Course 3: B.Tech -->
-                    <article class="course-card">
-                        <div class="card-badge">Engineering</div>
-                        <!-- Unique Typeface: 'Trebuchet MS', sans-serif | Color: Crimson Red | Style: Oblique -->
-                        <h3 class="course-name course-btech">B.Tech (Bachelor of Technology)</h3>
-                        <p class="course-description">
-                            A 4-year premier engineering program offering specializations in Artificial Intelligence, Computer Science Engineering, Electronics, and Cyber Security.
+                            Comprehensive program with world-class aerodynamics labs, flight simulation centers, UAV design, avionics systems, and propulsion engineering research.
                         </p>
                         <div class="course-meta">
                             <span>⏱️ <strong>Duration:</strong> 4 Years</span>
@@ -139,31 +130,45 @@
                         </div>
                     </article>
 
-                    <!-- Course 4: BBA -->
+                    <!-- Course 3: BCA -->
                     <article class="course-card">
-                        <div class="card-badge">Management</div>
-                        <!-- Unique Typeface: 'Palatino Linotype', serif | Color: Dark Amber/Gold | Style: Italic -->
-                        <h3 class="course-name course-bba">BBA (Bachelor of Business Administration)</h3>
+                        <div class="card-badge">Computer Applications</div>
+                        <!-- Unique Typeface: 'Trebuchet MS', sans-serif | Color: Crimson Red | Style: Oblique -->
+                        <h3 class="course-name course-bca">BCA (Bachelor of Computer Applications)</h3>
                         <p class="course-description">
-                            Designed to build visionary business leaders, covering financial accounting, marketing strategies, human resource management, entrepreneurship, and international trade.
+                            Industry-oriented undergraduate program covering software engineering, modern web technologies, database administration, mobile app development, and Python programming.
                         </p>
                         <div class="course-meta">
                             <span>⏱️ <strong>Duration:</strong> 3 Years</span>
-                            <span>🎯 <strong>Eligibility:</strong> 10+2 Any Stream</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Math/CS</span>
                         </div>
                     </article>
 
-                    <!-- Course 5: B.Com -->
+                    <!-- Course 4: B.Tech Electronics & Communication -->
                     <article class="course-card">
-                        <div class="card-badge">Commerce & Finance</div>
-                        <!-- Unique Typeface: 'Courier New', monospace | Color: Deep Purple/Violet | Style: Normal Monospace -->
-                        <h3 class="course-name course-bcom">B.Com (Bachelor of Commerce)</h3>
+                        <div class="card-badge">Electronics &amp; VLSI</div>
+                        <!-- Unique Typeface: 'Palatino Linotype', serif | Color: Dark Amber/Gold | Style: Italic -->
+                        <h3 class="course-name course-ece">B.Tech in Electronics &amp; Communication</h3>
                         <p class="course-description">
-                            Focuses on financial accounting, corporate taxation, auditing, banking, and commercial law to prepare graduates for careers in finance, investment, and chartered accountancy.
+                            Focused on Embedded Systems, Internet of Things (IoT), VLSI chip design, signal processing, next-generation 5G/6G wireless networks, and robotics.
                         </p>
                         <div class="course-meta">
-                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
-                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Commerce/Math</span>
+                            <span>⏱️ <strong>Duration:</strong> 4 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with PCM</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 5: B.Des (Bachelor of Design) -->
+                    <article class="course-card">
+                        <div class="card-badge">Design &amp; Media</div>
+                        <!-- Unique Typeface: 'Courier New', monospace | Color: Deep Purple/Violet | Style: Normal Monospace -->
+                        <h3 class="course-name course-bdes">B.Des (Bachelor of Design)</h3>
+                        <p class="course-description">
+                            Professional design degree emphasizing UI/UX interaction design, product design, digital media arts, spatial design, and user-centric creative innovation.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 4 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 Any Stream / JET</span>
                         </div>
                     </article>
 
@@ -173,7 +178,7 @@
                         <!-- Unique Typeface: 'Verdana', sans-serif | Color: Teal / Cyan | Style: Oblique -->
                         <h3 class="course-name course-mca">MCA (Master of Computer Applications)</h3>
                         <p class="course-description">
-                            Advanced postgraduate specialization program covering distributed systems, enterprise software architecture, AI algorithms, DevOps, and research methodology.
+                            Advanced master's degree focusing on enterprise architecture, deep learning, distributed cloud systems, big data analytics, and corporate internships.
                         </p>
                         <div class="course-meta">
                             <span>⏱️ <strong>Duration:</strong> 2 Years</span>
@@ -184,32 +189,32 @@
                 </div>
             </section>
 
-            <!-- Campus Life & Facilities Section -->
+            <!-- Campus Facilities at Jain Global Campus, Kanakapura -->
             <section class="facilities-section">
                 <div class="section-header">
                     <h2 class="section-title">Campus Facilities</h2>
-                    <p class="section-subtitle">World-class infrastructure designed to foster innovation and holistic learning</p>
+                    <p class="section-subtitle">State-of-the-art infrastructure across 300 acres in Kanakapura, Karnataka</p>
                 </div>
                 <div class="facilities-grid">
                     <div class="facility-item">
+                        <div class="facility-icon">🏟️</div>
+                        <h4>Sprint Sports Complex</h4>
+                        <p>Olympic-standard athletic track, cricket stadium, football arena, tennis courts, and gymnasium.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">🔬</div>
+                        <h4>Hi-Tech Research Labs</h4>
+                        <p>Specialized AI, Robotics, Aerospace wind tunnel, IoT, and Cloud computing research centers.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">🏡</div>
+                        <h4>Residential Hostels</h4>
+                        <p>Modern on-campus student housing with Wi-Fi, dining halls, medical center, and 24/7 security.</p>
+                    </div>
+                    <div class="facility-item">
                         <div class="facility-icon">📚</div>
                         <h4>Central Digital Library</h4>
-                        <p>Over 100,000+ volumes, scientific journals, and 24/7 digital research portal access.</p>
-                    </div>
-                    <div class="facility-item">
-                        <div class="facility-icon">💻</div>
-                        <h4>Advanced Computing Labs</h4>
-                        <p>High-performance workstations equipped with GPU clusters and modern development tools.</p>
-                    </div>
-                    <div class="facility-item">
-                        <div class="facility-icon">⚽</div>
-                        <h4>Sports & Recreation</h4>
-                        <p>Olympic-standard athletic track, indoor badminton courts, gymnasium, and sports arena.</p>
-                    </div>
-                    <div class="facility-item">
-                        <div class="facility-icon">🏢</div>
-                        <h4>Innovation & Incubation Hub</h4>
-                        <p>Dedicated mentorship and seed funding support for student-led tech startups.</p>
+                        <p>Extensive repository of international research journals, IEEE access, and e-learning resources.</p>
                     </div>
                 </div>
             </section>
@@ -217,29 +222,30 @@
 
         <!-- =====================================================
              FOOTER SECTION
-             Semantic HTML5 footer with contact info & copyright
+             Jain Global Campus, Kanakapura contact information
              ===================================================== -->
         <footer class="college-footer">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Imperial Institute</h3>
-                    <p>Committed to nurturing global leaders through academic excellence, innovation, and ethical values.</p>
+                    <h3>Jain Global Campus</h3>
+                    <p>Faculty of Engineering &amp; Technology (FET)<br>Jain (Deemed-to-be University)<br>A vibrant academic haven fostering innovation and leadership.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Contact Information</h3>
-                    <p>📧 Email: admissions@imperialinstitute.edu</p>
-                    <p>📞 Phone: +91 (080) 4567-8900 / 8901</p>
-                    <p>🌐 Web: www.imperialinstitute.edu</p>
+                    <p>📍 Kanakapura Road, Ramanagara Dist, Karnataka - 562112</p>
+                    <p>📧 Email: fet@jainuniversity.ac.in</p>
+                    <p>📞 Phone: +91 80 2757 7200 / +91 80 2757 7201</p>
+                    <p>🌐 Web: www.jainuniversity.ac.in</p>
                 </div>
                 <div class="footer-col">
                     <h3>Campus Hours</h3>
-                    <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
-                    <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    <p>Sunday: Closed</p>
+                    <p>Monday - Friday: 8:30 AM - 5:00 PM</p>
+                    <p>Saturday: 8:30 AM - 1:00 PM</p>
+                    <p>Sunday: Closed (Hostel Open 24/7)</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Imperial Institute of Science & Technology. All Rights Reserved. | Designed for Web Programming Lab</p>
+                <p>&copy; 2026 Jain Global Campus – Kanakapura. All Rights Reserved. | Web Programming Lab</p>
             </div>
         </footer>
 
