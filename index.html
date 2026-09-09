@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Requirement (a): Page title must be "My College" -->
+    <title>My College</title>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =========================================================
+         BACKGROUND OVERLAY WRAPPER
+         Ensures background image covers full screen with high contrast
+         ========================================================= -->
+    <div class="page-overlay"></div>
+
+    <!-- MAIN CONTAINER: Glassmorphism layout for clean readability -->
+    <div class="main-wrapper">
+
+        <!-- =====================================================
+             TOP HEADER SECTION
+             Requirement (c): Large, bold college name + address below
+             Center-aligned, clean and professional typography
+             ===================================================== -->
+        <header class="college-header">
+            <div class="college-badge">🏛️ ESTD. 1985 • NAAC 'A++' ACCREDITED</div>
+            <h1 class="college-title">Imperial Institute of Science & Technology</h1>
+            <p class="college-tagline">Excellence in Higher Education, Innovation & Research</p>
+            <address class="college-address">
+                📍 Knowledge Innovation Park, Sector 42, Outer Ring Road, Bengaluru, Karnataka - 560103, India
+            </address>
+        </header>
+
+        <!-- =====================================================
+             ANNOUNCEMENTS / NEWS TICKER (MARQUEE)
+             Requirement (e): Scrolling text with examination dates,
+             college events, seminars, workshops, and admissions
+             ===================================================== -->
+        <section class="announcement-banner" aria-label="College Announcements">
+            <div class="announcement-label">
+                <span class="pulse-icon"></span>
+                <strong>LATEST NEWS:</strong>
+            </div>
+            <div class="marquee-container">
+                <!-- HTML Marquee element with CSS fallback and styling -->
+                <marquee behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();">
+                    📢 <strong>Upcoming Exams:</strong> Semester examinations begin from 15 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🎉 <strong>College Fest:</strong> Annual Cultural Fest "AURA 2026" on 25 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🤖 <strong>Seminar & Workshop:</strong> National Workshop on Artificial Intelligence & Deep Learning on 30 October 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🎓 <strong>Admissions Open:</strong> Applications open for Academic Year 2026-27 (BCA, B.Sc, B.Tech, BBA, B.Com) 
+                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
+                    🏆 <strong>Scholarship Alert:</strong> Merit-based scholarship forms submission deadline is 05 November
+                </marquee>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             MAIN CONTENT AREA
+             ===================================================== -->
+        <main>
+            <!-- College Key Highlights Section -->
+            <section class="highlights-section">
+                <div class="stat-card">
+                    <span class="stat-number">#1</span>
+                    <span class="stat-desc">Top Ranked Regional College</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-desc">Placement Assistance</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-desc">Hi-Tech Labs & Centers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">25k+</span>
+                    <span class="stat-desc">Global Alumni Network</span>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 COURSES OFFERED SECTION
+                 Requirement (d): Section titled "Courses Offered".
+                 Each course name has a DIFFERENT text color, font style,
+                 and typeface, while remaining modern and distinct.
+                 ===================================================== -->
+            <section class="courses-section" id="courses">
+                <div class="section-header">
+                    <h2 class="section-title">Courses Offered</h2>
+                    <p class="section-subtitle">Empowering students with industry-aligned academic programs and practical training</p>
+                </div>
+
+                <div class="courses-grid">
+
+                    <!-- Course 1: BCA -->
+                    <article class="course-card">
+                        <div class="card-badge">Computer & IT</div>
+                        <!-- Unique Typeface: 'Segoe UI', sans-serif | Color: Royal Blue | Style: Normal Bold -->
+                        <h3 class="course-name course-bca">BCA (Bachelor of Computer Applications)</h3>
+                        <p class="course-description">
+                            A comprehensive 3-year undergraduate program focusing on software development, web technologies, database management, cloud computing, and modern full-stack web engineering.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Math/CS</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 2: B.Sc Computer Science -->
+                    <article class="course-card">
+                        <div class="card-badge">Science & Research</div>
+                        <!-- Unique Typeface: 'Georgia', serif | Color: Emerald Green | Style: Italic -->
+                        <h3 class="course-name course-bsc">B.Sc Computer Science</h3>
+                        <p class="course-description">
+                            An in-depth academic curriculum emphasizing theoretical foundations of computing, algorithm design, data structures, machine learning, and discrete mathematics.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Science</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 3: B.Tech -->
+                    <article class="course-card">
+                        <div class="card-badge">Engineering</div>
+                        <!-- Unique Typeface: 'Trebuchet MS', sans-serif | Color: Crimson Red | Style: Oblique -->
+                        <h3 class="course-name course-btech">B.Tech (Bachelor of Technology)</h3>
+                        <p class="course-description">
+                            A 4-year premier engineering program offering specializations in Artificial Intelligence, Computer Science Engineering, Electronics, and Cyber Security.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 4 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with PCM</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 4: BBA -->
+                    <article class="course-card">
+                        <div class="card-badge">Management</div>
+                        <!-- Unique Typeface: 'Palatino Linotype', serif | Color: Dark Amber/Gold | Style: Italic -->
+                        <h3 class="course-name course-bba">BBA (Bachelor of Business Administration)</h3>
+                        <p class="course-description">
+                            Designed to build visionary business leaders, covering financial accounting, marketing strategies, human resource management, entrepreneurship, and international trade.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 Any Stream</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 5: B.Com -->
+                    <article class="course-card">
+                        <div class="card-badge">Commerce & Finance</div>
+                        <!-- Unique Typeface: 'Courier New', monospace | Color: Deep Purple/Violet | Style: Normal Monospace -->
+                        <h3 class="course-name course-bcom">B.Com (Bachelor of Commerce)</h3>
+                        <p class="course-description">
+                            Focuses on financial accounting, corporate taxation, auditing, banking, and commercial law to prepare graduates for careers in finance, investment, and chartered accountancy.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 3 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> 10+2 with Commerce/Math</span>
+                        </div>
+                    </article>
+
+                    <!-- Course 6: MCA -->
+                    <article class="course-card">
+                        <div class="card-badge">Postgraduate Studies</div>
+                        <!-- Unique Typeface: 'Verdana', sans-serif | Color: Teal / Cyan | Style: Oblique -->
+                        <h3 class="course-name course-mca">MCA (Master of Computer Applications)</h3>
+                        <p class="course-description">
+                            Advanced postgraduate specialization program covering distributed systems, enterprise software architecture, AI algorithms, DevOps, and research methodology.
+                        </p>
+                        <div class="course-meta">
+                            <span>⏱️ <strong>Duration:</strong> 2 Years</span>
+                            <span>🎯 <strong>Eligibility:</strong> BCA / B.Sc / Graduation</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Campus Life & Facilities Section -->
+            <section class="facilities-section">
+                <div class="section-header">
+                    <h2 class="section-title">Campus Facilities</h2>
+                    <p class="section-subtitle">World-class infrastructure designed to foster innovation and holistic learning</p>
+                </div>
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <div class="facility-icon">📚</div>
+                        <h4>Central Digital Library</h4>
+                        <p>Over 100,000+ volumes, scientific journals, and 24/7 digital research portal access.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">💻</div>
+                        <h4>Advanced Computing Labs</h4>
+                        <p>High-performance workstations equipped with GPU clusters and modern development tools.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">⚽</div>
+                        <h4>Sports & Recreation</h4>
+                        <p>Olympic-standard athletic track, indoor badminton courts, gymnasium, and sports arena.</p>
+                    </div>
+                    <div class="facility-item">
+                        <div class="facility-icon">🏢</div>
+                        <h4>Innovation & Incubation Hub</h4>
+                        <p>Dedicated mentorship and seed funding support for student-led tech startups.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =====================================================
+             FOOTER SECTION
+             Semantic HTML5 footer with contact info & copyright
+             ===================================================== -->
+        <footer class="college-footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Imperial Institute</h3>
+                    <p>Committed to nurturing global leaders through academic excellence, innovation, and ethical values.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p>📧 Email: admissions@imperialinstitute.edu</p>
+                    <p>📞 Phone: +91 (080) 4567-8900 / 8901</p>
+                    <p>🌐 Web: www.imperialinstitute.edu</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Campus Hours</h3>
+                    <p>Monday - Friday: 8:30 AM - 5:30 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imperial Institute of Science & Technology. All Rights Reserved. | Designed for Web Programming Lab</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
